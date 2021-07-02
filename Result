@@ -1,0 +1,28 @@
+class RepeateDice
+{
+    rollDice()
+    { 
+        var dice = Math.random()*(6)+1;
+        dice = Math.floor(dice);
+        var temp = dice;
+        var count = 0;
+        while(true)
+        {
+            dice = Math.random()*(6)+1;
+            dice = Math.floor(dice);
+
+            if(temp == dice)
+            {
+                console.log("Same element is found after",count,"Repeatitions:");
+                break;
+            }
+            count ++;
+        }
+
+    }
+            
+}
+
+let Dice = new RepeateDice();
+Dice.rollDice();
+© 2021 GitHub, Inc.
