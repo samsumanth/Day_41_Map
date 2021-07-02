@@ -1,0 +1,31 @@
+class RepeateDice
+{
+    rollDice()
+    { 
+        var dict = new Object();
+        var dice = Math.random()*(6)+1;
+        dice = Math.floor(dice);
+        var temp = dice;
+        var count = 0;
+        while(true)
+        {
+            dice = Math.random()*(6)+1;
+            dice = Math.floor(dice);
+            count ++;
+
+            if(temp == dice)
+            {
+                console.log("Same element is found after",count,"Repeatitions:");
+                dict = {dice};
+                console.log("element is store in dictionary:",dict);
+                break;
+            }
+        
+        }
+
+    }
+            
+}
+
+let Dice = new RepeateDice();
+Dice.rollDice();
