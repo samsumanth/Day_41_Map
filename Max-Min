@@ -1,0 +1,108 @@
+var flag1=0,flag2=0,flag3=0,flag4=0,flag5=0,flag6=0;
+class RepeateDice
+{
+    rollDice()
+    { 
+      
+        while(true)
+        {
+            var dice = Math.random()*(6)+1;
+            dice = Math.floor(dice);
+            if(dice == 1)
+            {
+                flag1 ++;
+            }
+            else if(dice == 2)
+            {
+                flag2 ++;
+            }      
+            else if(dice == 3)
+            {
+                flag3 ++;
+            }      
+            else if(dice == 4)
+            {
+                flag4 ++;
+            }      
+            else if(dice == 5)
+            {
+                flag5 ++;
+            }      
+            else
+            {
+                flag6 ++;
+            }       
+            
+            if(flag1 == 10 || flag2 == 10 || flag3 == 10 || flag4 == 10 || flag5 ==10 || flag6 == 10)
+            {
+                console.log("Repeating dice roll until same element found 10 times:");
+                break;
+            }
+        }
+
+    }
+
+    findMaxInDice()
+    {
+        if(flag1 > flag2 && flag1 > flag3 && flag1 > flag4 && flag1 > falg5 && flag1 > flag6)
+        {
+            console.log("number 1 is repeated more times than other:");
+        }
+        else if(flag2 > flag1 && flag2 > flag3 && flag2 > flag4 && flag2 > flag5 && flag2 > flag6)
+        {
+            console.log("number 2 is repeated more times than other:");
+        }
+        else if(flag3 > flag1 && flag3 > flag2 && flag3 > flag4 && flag3 > falg5 && flag3 > flag6)
+        {
+            console.log("number 3 is repeated more times than other:");
+        }
+        else if(flag4 > flag1 && flag4 > flag2 && flag4 > flag3 && flag4 > flag5 && flag4 > flag6)
+        {
+            console.log("number 4 is repeated more times than other:");
+        }
+        else if(flag5 > flag1 && flag5 > flag2 && flag5 > flag3 && flag5 > flag4 && flag5 > flag6)
+        {
+            console.log("number 5 is repeated more times than other:");
+        }
+        else
+        {
+            console.log("number 6 is repeated more times than other:");
+        }
+        
+    }
+
+    findMinInDice()
+    {
+        if(flag1 < flag2 && flag1 < flag3 && falg1 < flag4 && flag1 && flag1 < flag5 && flag1 < flag6)
+        {
+            console.log("number 1 is repeated less times than other:");
+        }
+        else if(flag2 < flag1 && flag2 < flag3 && flag2 < flag4 && flag2 < falg5 && flag2 < flag6)
+        {
+            console.log("number 2 is repeated less times than other:");
+        }
+        else if(flag3 < flag1 && flag3 < flag2 && flag3 < flag4 && flag3 < falg5 && flag3 < flag6)
+        {
+            console.log("number 3 is repeated less times than other:");
+        }
+        else if(flag4 < flag1 && flag4 < flag2 && flag4 < flag3 && flag4 < falg5 && flag4 < flag6)
+        {
+            console.log("number 4 is repeated less times than other:");
+        }
+        else if(flag5 < flag1 && flag5 < flag2 && flag5 < flag3 && flag5 < falg4 && flag5 < flag6)
+        {
+            console.log("number 5 is repeated less times than other:");
+        }
+        else
+        {
+            console.log("number 6 is repeated less times than other:");
+        }
+        
+    }
+            
+}
+
+let Dice = new RepeateDice();
+Dice.rollDice();
+Dice.findMinInDice();
+Dice.findMaxInDice();
